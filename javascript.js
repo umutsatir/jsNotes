@@ -61,3 +61,39 @@ let e = c ?? d; // it returns 10 because c is null
 
 // * ARROW FUNCTIONS //
 let sum = (a, b) => a + b; // it returns the sum of a and b
+
+
+
+// * ARRAY FOREACH FUNCTION //
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let textlist = "<ul>";
+fruits.forEach(myFunction); // it calls the function for each element of the array
+textlist += "</ul>";
+
+function myFunction(value) {
+    textlist += "<li>" + value + "</li>";
+}
+
+fruits.push("Lemon"); // it adds a new element to the end of the array
+let fruitlength = fruits.push("Lemon"); // it returns the new length of the array
+fruits.pop(); // it removes the last element of the array
+let poppedfruit = fruits.pop(); // it returns the removed element
+
+Array.isArray(fruits); // it returns true if the variable is an array
+fruits instanceof Array; // it returns true if the variable is an array
+fruits.toString(); // it returns the array as a string seperated by commas
+fruits.join(" * "); // it returns the array as a string seperated by the given string
+fruits.shift(); // it removes the first element of the array and shifts all other elements to a lower index
+fruits.unshift("Lemon"); // it adds a new element to the beginning of the array and shifts all other elements to a higher index
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myBros = ["Robin", "Morgan"];
+const myChildren = myGirls.concat(myBoys, myBros); // it returns a new array by merging three arrays
+
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+fruits2.splice(2, 0, "Lemon", "Kiwi"); // it adds new elements to an array and removes old elements
+// first parameter is the index where new elements should be added (spliced in)
+// second parameter is the number of elements to be removed
+// rest of the parameters are the new elements to be added
