@@ -97,3 +97,41 @@ fruits2.splice(2, 0, "Lemon", "Kiwi"); // it adds new elements to an array and r
 // first parameter is the index where new elements should be added (spliced in)
 // second parameter is the number of elements to be removed
 // rest of the parameters are the new elements to be added
+
+const citrus = fruits2.slice(1); // it returns a new array with the elements from the given index to the end
+
+let div = element.querySelectorAll("div"); // it returns all divs in a nodelist
+// ! NODELIST IS NOT AN ARRAY! But if you want to convert it to an array, use Array.from()
+
+div.setAttribute('id', 'theDiv');                              
+// if id exists, update it to 'theDiv', else create an id
+// with value "theDiv"
+
+div.getAttribute('id');                                        
+// returns value of specified attribute, in this case
+// "theDiv"
+
+div.removeAttribute('id');                                     
+// removes specified attribute
+
+div.classList.add('new');                                      
+// adds class "new" to your new div
+
+div.classList.remove('new');                                   
+// removes "new" class from div
+
+div.classList.toggle('active');                                
+// if div doesn't have class "active" then add it, or if it does, then remove it
+
+div.textContent = 'Hello World!'                               
+// creates a text node containing "Hello World!" and
+// inserts it in div
+
+div.innerHTML = '<span>Hello World!</span>';                   
+// renders the HTML inside div
+
+div.appendChild(content); // it creates a child
+
+<script src="js-file.js" defer></script> // if you have DOM commands like above, you should use defer command
+// it loads the JS file AFTER the HTML code. Or you can write this script under.
+
